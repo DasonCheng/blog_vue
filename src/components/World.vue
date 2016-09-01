@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div class="world">
     <h1>{{ msg }}</h1>
   </div>
 </template>
@@ -8,12 +8,12 @@
   export default {
     data () {
       return {
-        msg: 'Hello Vue!'
+        msg: 'Hello world!'
       }
     },
     route: {
       data () {
-        document.title = 'Vue';
+        document.title = 'World';
       }
     }
   }
