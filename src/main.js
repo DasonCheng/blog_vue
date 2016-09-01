@@ -3,8 +3,8 @@ import Router from 'vue-router'
 import App from './App'
 import article from './components/article_list'
 import article_info from './components/article_info'
-import signIn from './components/signin'
-import signUp from './components/signup'
+import signIn from './components/sign_in'
+import signUp from './components/sign_up'
 import test from './components/test'
 
 // install router
