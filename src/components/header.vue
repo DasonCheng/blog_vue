@@ -23,10 +23,10 @@
     <div class="nav-bar-max">
       <div class="ui inverted menu">
         <div class="ui container">
-          <a v-link="{ path: '/signin' }" class="item">SignIn</a>
-          <a v-link="{ path: '/signup' }" class="item">SignUp</a>
+          <a v-link="{ path: '/article' }" class="item">Article</a>
+          <a v-link="{ path: '/test' }" class="item">Test</a>
           <div class="right menu">
-            <a href="sign_in.html" class="ui item">
+            <a v-link="{ path: '/signin' }" class="ui item">
               <i class="user icon"></i>
             </a>
             <div class="ui item dropdown">

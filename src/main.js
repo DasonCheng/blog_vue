@@ -1,8 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import App from './App'
-import signIn from './components/signin.vue'
-import signUp from './components/signup.vue'
+import article from './components/article_list'
+import article_info from './components/article_info'
+import signIn from './components/signin'
+import signUp from './components/signup'
+import test from './components/test'
 
 // install router
 Vue.use(Router);
@@ -10,11 +13,22 @@ Vue.use(Router);
 var router = new Router();
 
 router.map({
-  'signin': {
+  '/articles/:sort/:page': {
+    name: 'article',
+    component: article
+  },
+  '/article/:articleId': {
+    name: 'info',
+    component: article_info
+  },
+  '/signin': {
     component: signIn
   },
-  'signup': {
+  '/signup': {
     component: signUp
+  },
+  '/test': {
+    component: test
   }
 });
 
@@ -23,7 +37,7 @@ router.beforeEach(function () {
 });
 
 router.redirect({
-  '*': 'signin'
+  '*': '/articles/all/1'
 });
 
 router.start(App, 'app');
