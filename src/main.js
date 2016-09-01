@@ -1,22 +1,20 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import App from './App'
-import Hello from './components/Hello'
-import World from './components/World'
+import signIn from './components/signin.vue'
+import signUp from './components/signup.vue'
 
 // install router
 Vue.use(Router);
-
-
 // routing
 var router = new Router();
 
 router.map({
-  '': {
-    component: Hello
+  'signin': {
+    component: signIn
   },
-  'world': {
-    component: World
+  'signup': {
+    component: signUp
   }
 });
 
@@ -25,7 +23,7 @@ router.beforeEach(function () {
 });
 
 router.redirect({
-  '*': ''
+  '*': 'signin'
 });
 
 router.start(App, 'app');
