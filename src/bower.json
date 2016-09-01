@@ -1,0 +1,20 @@
+{
+  "name": "src",
+  "homepage": "https://github.com/DasonCheng/vue-blog",
+  "authors": [
+    "Origin <dasoncheng@foxmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "semantic": "^2.2.4"
+  }
+}
