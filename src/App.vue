@@ -34,8 +34,6 @@
 </script>
 
 <style lang="scss">
-  @import "bower_components/semantic/dist/semantic.min.css";
-
   .clearfix::after, .clearfix::before {
     content: '';
     display: block;

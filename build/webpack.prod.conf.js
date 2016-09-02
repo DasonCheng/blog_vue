@@ -12,7 +12,7 @@ var env = process.env.NODE_ENV === 'testing'
 
 var webpackConfig = merge(baseWebpackConfig, {
   module: {
-    loaders: utils.styleLoaders({ sourceMap: config.build.productionSourceMap, extract: true })
+    loaders: utils.styleLoaders({sourceMap: config.build.productionSourceMap, extract: true})
   },
   devtool: config.build.productionSourceMap ? '#source-map' : false,
   output: {
@@ -77,6 +77,12 @@ var webpackConfig = merge(baseWebpackConfig, {
     new webpack.optimize.CommonsChunkPlugin({
       name: 'manifest',
       chunks: ['vendor']
+    }),
+    new webpack.ProvidePlugin({
+      // jquery
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery'
     })
   ]
 })

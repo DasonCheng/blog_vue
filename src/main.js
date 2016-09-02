@@ -6,8 +6,9 @@ import article_info from './components/article_info'
 import signIn from './components/sign_in'
 import signUp from './components/sign_up'
 import test from './components/test'
+import './bower_components/semantic/dist/semantic.min'
+import './bower_components/semantic/dist/semantic.min.css';
 
-// install router
 Vue.use(Router);
 // routing
 var router = new Router();

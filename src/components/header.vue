@@ -3,7 +3,7 @@
     <div class="nav-bar-min">
       <div class="ui fixed inverted main menu">
         <div class="ui container">
-          <a id="sidebar" href="javascript:void(0);" class="icon item">
+          <a @click.stop="say('hello!', $event)" href="javascript:void(0);" class="icon item">
             <i class="content icon"></i>
           </a>
           <div class="right menu">
@@ -54,4 +54,12 @@
   }
 </style>
 <script>
+  export default{
+    methods: {
+      say: function (msg, event) {
+        // 现在我们可以访问原生事件对象
+        $('#left_bar').sidebar('toggle');
+      }
+    }
+  }
 </script>
