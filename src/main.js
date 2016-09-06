@@ -15,7 +15,7 @@ var router = new Router();
 
 router.map({
   '/articles/:sort/:page': {
-    name: 'article',
+    name: 'articles',
     component: article
   },
   '/article/:articleId': {
@@ -33,12 +33,17 @@ router.map({
   }
 });
 
+router.alias({
+  '/articles': '/articles/all/1',
+  '/articles/:sort': '/articles/:sort/1'
+});
+
 router.beforeEach(function () {
   window.scrollTo(0, 0)
 });
 
 router.redirect({
-  '*': '/articles/all/1'
+  '*': '/articles'
 });
 
 router.start(App, 'app');

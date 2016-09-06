@@ -3,7 +3,7 @@
     <a class="item"><i class="caret left icon"></i></a>
     <div class="disabled item">1</div>
     <template v-for="page in pages">
-      <a v-link="{ name: 'article', params: { page: page }}" class="item">{{page}}</a>
+      <a v-link="{ name: 'articles', params: { page: page }}" class="item">{{page}}</a>
     </template>
     <a class="item"><i class="caret right icon"></i></a>
   </div>

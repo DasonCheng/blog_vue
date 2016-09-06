@@ -2,7 +2,7 @@
   <div class="left-side">
     <div class="ui vertical pointing menu">
       <template v-for="sort in sorts">
-        <a v-link="{ name: 'article', params: { sort: sort.sort,page: 1 }}" class="item">
+        <a v-link="{ path: '/articles/'+sort.sort }" class="item">
           {{sort.name}}
           <div class="ui black label">{{sort.count}}</div>
         </a>
