@@ -4,7 +4,7 @@
       <template v-for="sort in sorts">
         <a v-link="{ name: 'article', params: { sort: sort.sort,page: 1 }}" class="item">
           {{sort.name}}
-          <div class="ui brown label">{{sort.count}}</div>
+          <div class="ui black label">{{sort.count}}</div>
         </a>
       </template>
       <a class="item">

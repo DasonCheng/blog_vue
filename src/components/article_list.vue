@@ -72,6 +72,9 @@
       padding-top: 1rem !important;
       .ui.card, .ui.cards > .card {
         width: 100%;
+        .header {
+          font-weight: normal !important;
+        }
       }
       a {
         span.right.floated,

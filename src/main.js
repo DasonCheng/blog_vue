@@ -7,7 +7,7 @@ import signIn from './components/sign_in'
 import signUp from './components/sign_up'
 import test from './components/test'
 import './bower_components/semantic/dist/semantic.min'
-import './bower_components/semantic/dist/semantic.min.css';
+import './bower_components/semantic/src/semantic.less';
 
 Vue.use(Router);
 // routing
