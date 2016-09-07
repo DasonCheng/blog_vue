@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import App from './App'
+import VueResource from 'vue-resource'
 import article from './components/article_list'
 import article_info from './components/article_info'
 import signIn from './components/sign_in'
@@ -9,6 +10,7 @@ import test from './components/test'
 import './bower_components/semantic/dist/semantic.min'
 import './bower_components/semantic/src/semantic.less';
 
+Vue.use(VueResource);
 Vue.use(Router);
 // routing
 var router = new Router();
