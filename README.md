@@ -14,3 +14,20 @@ npm run dev
 # build for production with minification
 npm run build
 ```
+
+###router
+
+```
+router-conf
+var router = new Router({
+  // hashbang: false,
+  history: true
+});
+
+
+//Nginx
+location / {
+    rewrite / /index.html;
+    break;
+}
+```
