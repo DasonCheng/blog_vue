@@ -17,7 +17,7 @@
     },
     route: {
       data () {
-        document.title = 'Test';
+        document.setTitle('Test')
       }
     }
   }

@@ -43,7 +43,7 @@
   export default {
     route: {
       data () {
-        document.title = 'Sign Up';
+        document.setTitle('Sign Up');
       }
     }
   }

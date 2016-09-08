@@ -7,8 +7,9 @@ import article_info from './components/article_info'
 import signIn from './components/sign_in'
 import signUp from './components/sign_up'
 import test from './components/test'
-import './bower_components/semantic/dist/semantic.min'
-import './bower_components/semantic/src/semantic.less'
+import './assets/lib/semantic/semantic.min'
+import './assets/lib/semantic/src/semantic.less'
+import './assets/js/setTitle'
 
 Vue.use(VueResource);
 Vue.use(Router);

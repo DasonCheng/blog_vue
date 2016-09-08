@@ -52,7 +52,7 @@
   export default {
     route: {
       data () {
-        document.title = 'Sign In';
+        document.setTitle('Sign In');
       }
     }
   }

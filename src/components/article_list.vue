@@ -137,7 +137,7 @@
     methods: {},
     route: {
       data () {
-        document.title = 'Articles';
+        document.setTitle('Articles')
       }
     }
   }

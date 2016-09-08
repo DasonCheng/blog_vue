@@ -109,4 +109,11 @@
 <style>
 </style>
 <script>
+  export default {
+    route: {
+      data () {
+        document.setTitle('最好的我们：在青春这条道路上,我们平凡而又坚定');
+      }
+    }
+  }
 </script>
