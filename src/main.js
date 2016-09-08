@@ -8,17 +8,32 @@ import signIn from './components/sign_in'
 import signUp from './components/sign_up'
 import test from './components/test'
 import './bower_components/semantic/dist/semantic.min'
-import './bower_components/semantic/src/semantic.less';
+import './bower_components/semantic/src/semantic.less'
 
 Vue.use(VueResource);
 Vue.use(Router);
 // routing
-var router = new Router();
+var router = new Router({
+  // hashbang: false,
+  history: true
+});
 
 router.map({
-  '/articles/:sort/:page': {
+  '/articles': {
     name: 'articles',
-    component: article
+    component: article,
+    subRoutes: {
+      '/:sort': {
+        name: 'articles_sort',
+        component: article,
+        subRoutes: {
+          '/:page': {
+            name: 'articles_page',
+            component: article
+          }
+        }
+      }
+    }
   },
   '/article/:articleId': {
     name: 'info',
