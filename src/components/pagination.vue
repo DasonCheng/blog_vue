@@ -23,11 +23,9 @@
 </style>
 <script>
   export default{
-    data(){
-      return {
-        pages: [
-          1, 2, 3, 4, 5, 6
-        ]
+    vuex: {
+      getters: {
+        pages: state => state.pages
       }
     }
   }

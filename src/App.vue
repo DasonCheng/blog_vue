@@ -21,11 +21,6 @@
   import footerComponent from 'components/footer'
   import store from './vuex/store'
   export default{
-    data(){
-      return {
-        msg: 'hello vue'
-      }
-    },
     components: {
       sidebarComponent,
       headerComponent,
