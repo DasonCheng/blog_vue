@@ -1,23 +1,46 @@
 <template>
   <section>
     <div class="ui container">
-      <p>{{ message }}</p>
-      <input v-model="message">
+      <div>
+        Clicked: {{ count }} times
+        <button @click="increment">+</button>
+        <button @click="decrement">-</button>
+        <input type="text" v-model="thiscount">
+      </div>
     </div>
   </section>
 </template>
-<style>
+<style lang="scss" scoped>
+  .ui.table {
+    text-align: center;
+  }
 </style>
 <script>
+  import {increment, decrement, updateMessage} from '../vuex/actions'
   export default{
-    data(){
-      return {
-        message: 'Hello Vue.js!'
+    route: {
+      data(){
+        document.setTitle('Test')
       }
     },
-    route: {
-      data () {
-        document.setTitle('Test')
+    vuex: {
+      getters: {
+        count: state => state.count
+      },
+      actions: {
+        increment,
+        decrement,
+        updateMessage
+      }
+    },
+    computed: {
+      thiscount: {
+        get () {
+          return this.count
+        },
+        set (val) {
+          this.updateMessage(val)
+        }
       }
     }
   }

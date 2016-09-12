@@ -19,6 +19,7 @@
   import sidebarComponent from 'components/sidebar'
   import headerComponent from 'components/header'
   import footerComponent from 'components/footer'
+  import store from './vuex/store'
   export default{
     data(){
       return {
@@ -29,7 +30,8 @@
       sidebarComponent,
       headerComponent,
       footerComponent
-    }
+    },
+    store
   }
 </script>
 

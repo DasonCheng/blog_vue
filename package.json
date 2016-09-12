@@ -16,6 +16,7 @@
     "pug": "^2.0.0-beta6",
     "sass-loader": "^4.0.0",
     "vue": "^1.0.21",
+    "vuex": "^1.0.0-rc.2",
     "vue-resource": "^1.0.0",
     "vue-router": "^0.7.13"
   },
