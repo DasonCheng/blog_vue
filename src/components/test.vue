@@ -39,7 +39,17 @@
           return this.count
         },
         set (val) {
-          this.updateMessage(val)
+//          this.$http.get('http://api.blog.com/account/test').then((response) => {
+//            this.updateMessage(response.data)
+//          }, (response) =>  {
+//            // handle error
+//          });
+
+          this.$http.post('http://api.blog.com/account/up', {username: "123"}, {username: "123"}).then((response) => {
+            this.updateMessage(response.data)
+          }, (response) => {
+            // handle error
+          });
         }
       }
     }
