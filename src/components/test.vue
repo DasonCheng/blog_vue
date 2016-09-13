@@ -39,17 +39,33 @@
           return this.count
         },
         set (val) {
+          /*this.$http.get('http://node.blog.com/').then((response) => {
+            this.updateMessage(response.data)
+          }, (response) =>  {
+            // handle error
+          });*/
 //          this.$http.get('http://api.blog.com/account/test').then((response) => {
 //            this.updateMessage(response.data)
 //          }, (response) =>  {
 //            // handle error
 //          });
 
-          this.$http.post('http://api.blog.com/account/up', {username: "123"}, {username: "123"}).then((response) => {
-            this.updateMessage(response.data)
+          this.$http.post('http://node.blog.com/', {count: 123}, {
+            headers: {'Content-Type': 'multipart/form-data'}
+          }).then((response) => {
+            console.log(response.data)
+//            this.updateMessage(response.data)
           }, (response) => {
             // handle error
           });
+//          this.$http.post('http://api.blog.com/account/up', {count: 123}, {
+//            headers: {'Content-Type': 'multipart/form-data'}
+//          }).then((response) => {
+//            console.log(response.data)
+////            this.updateMessage(response.data)
+//          }, (response) => {
+//            // handle error
+//          });
         }
       }
     }
