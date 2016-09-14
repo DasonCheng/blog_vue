@@ -119,6 +119,9 @@
     route: {
       data () {
         document.setTitle('Articles')
+        this.$http.get('http://api.blog.com/media/articles/' + this.$route.params.sort + '/' + this.$route.params.page).then((response) => {
+          this.updateArticles(response.data)
+        });
       }
     },
     vuex: {
@@ -128,11 +131,6 @@
       actions: {
         updateArticles
       }
-    },
-    ready(){
-      this.$http.get('http://api.blog.com/media/articles').then((response) => {
-        this.updateArticles(response.data)
-      });
     }
   }
 </script>
