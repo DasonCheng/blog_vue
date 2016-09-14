@@ -16,7 +16,7 @@
   }
 </style>
 <script>
-  import {increment, decrement, updateMessage} from '../vuex/actions'
+  import {increment, decrement, updateCount} from '../vuex/actions'
   export default{
     route: {
       data(){
@@ -30,7 +30,7 @@
       actions: {
         increment,
         decrement,
-        updateMessage
+        updateCount
       }
     },
     computed: {
@@ -39,13 +39,14 @@
           return this.count
         },
         set (val) {
-          this.$http.get('http://api.blog.com/media/sort').then((response) => {
-            this.updateMessage(response.data)
-          }, (response) => {
-            // handle error
-          });
+          this.updateCount(val)
         }
       }
+    },
+    ready(){
+      this.$http.get('http://api.blog.com/media/test').then((response) => {
+        this.updateCount(response.data)
+      });
     }
   }
 </script>

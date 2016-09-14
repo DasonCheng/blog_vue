@@ -39,7 +39,7 @@ const mutations = {
   DECREMENT (state) {
     state.count--
   },
-  UPDATEMESSAGE (state, message) {
+  UPDATECOUNT (state, message) {
     state.count = Number(message)
   },
   UPDATESORT (state, sorts) {
