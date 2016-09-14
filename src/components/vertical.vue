@@ -3,7 +3,7 @@
     <div class="ui vertical pointing menu">
       <template v-for="sort in sorts">
         <a v-link="{ name: 'articles_sort', params: { sort:sort.sort } , activeClass:'active' }" class="item">
-          {{sort.name}}
+          {{sort.description}}
           <div class="ui black label">{{sort.count}}</div>
         </a>
       </template>
@@ -29,11 +29,20 @@
   }
 </style>
 <script>
+  import {updateSort} from '../vuex/actions'
   export default{
     vuex: {
       getters: {
         sorts: state => state.sorts
+      },
+      actions: {
+        updateSort
       }
+    },
+    ready(){
+      this.$http.get('http://api.blog.com/media/sort').then((response) => {
+        this.updateSort(response.data)
+      });
     }
   }
 </script>

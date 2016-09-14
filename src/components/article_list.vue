@@ -7,14 +7,14 @@
           <template v-for="article in articles">
             <a v-link="{ name: 'info', params: { articleId: article.id }}" class="ui link card">
               <div class="content">
-                <div class="header">{{article.header}}</div>
+                <div class="header">{{article.title}}</div>
                 <div class="description">
                   <p>{{article.description}}</p>
                 </div>
               </div>
               <div class="extra content">
               <span class="left floated">
-                <i class="wait icon"></i>{{article.data}}
+                <i class="wait icon"></i>{{article.date}}
               </span>
                 <span class="right floated">
               <div data-rating="4" data-max-rating="5" class="ui heart rating"></div>
@@ -110,12 +110,12 @@
 <script>
   import leftsideComponent from './vertical'
   import paginationComponent from './pagination'
+  import {updateArticles} from '../vuex/actions'
   export default{
     components: {
       leftsideComponent,
       paginationComponent
     },
-    methods: {},
     route: {
       data () {
         document.setTitle('Articles')
@@ -126,7 +126,13 @@
         articles: state => state.articles
       },
       actions: {
+        updateArticles
       }
+    },
+    ready(){
+      this.$http.get('http://api.blog.com/media/articles').then((response) => {
+        this.updateArticles(response.data)
+      });
     }
   }
 </script>

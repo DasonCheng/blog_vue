@@ -1,5 +1,5 @@
 <template>
-  <div class="ui pagination menu">
+  <div class="ui pagination menu" v-if="pages.length>1">
     <a v-link="{ name: 'articles_page', params: { page: parseInt($route.params.page)-1 } }" class="item"><i
       class="caret left icon"></i></a>
     <template v-for="page in pages">
