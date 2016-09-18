@@ -4,14 +4,11 @@
       <div class="ui two column middle aligned very relaxed stackable grid">
         <div class="column">
           <form class="ui form error">
-            <div class="field error">
+            <div class="field">
               <label for="username">NAME</label>
               <div class="ui left icon input">
                 <input id="username" type="text" name="username" placeholder="Your Name"/><i class="user icon"></i>
               </div>
-            </div>
-            <div class="ui error message">
-              <p>You can only sign up for an account</p>
             </div>
             <div class="field">
               <label for="password">PASSWORD</label>

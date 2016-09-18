@@ -44,7 +44,7 @@
       }
     },
     ready(){
-      this.$http.get('http://api.blog.com/media/test').then((response) => {
+      this.$http.get('https://api.myour.cc/media/test').then((response) => {
         this.updateCount(response.data)
       });
     }
