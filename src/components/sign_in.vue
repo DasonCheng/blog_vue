@@ -47,6 +47,10 @@
   .ui.two.column.middle.aligned.very.relaxed.stackable.grid {
     position: relative !important;
   }
+
+  .ui.vertical.divider {
+    left: 50% !important;
+  }
 </style>
 <script>
   export default {

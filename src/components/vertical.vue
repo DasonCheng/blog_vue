@@ -8,8 +8,8 @@
         </a>
       </template>
       <a class="item">
-        <form action="" method="post" class="ui transparent icon input">
-          <input type="text" name="searchKey" placeholder="Search ..."/>
+        <form action="" method="get" class="ui transparent icon input">
+          <input type="text" name="sort" placeholder="Search ..."/>
           <i class="search icon"></i>
         </form>
       </a>
