@@ -119,7 +119,7 @@
     route: {
       data () {
         document.setTitle('Articles')
-        this.$http.get('http://api.blog.com/media/articles/' + this.$route.params.sort + '/' + this.$route.params.page).then((response) => {
+        this.$http.get('https://api.myour.cc/media/articles/' + this.$route.params.sort + '/' + this.$route.params.page).then((response) => {
           this.updateArticles(response.data)
         });
       }

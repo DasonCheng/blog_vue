@@ -40,7 +40,7 @@
       }
     },
     ready(){
-      this.$http.get('http://api.blog.com/media/sort').then((response) => {
+      this.$http.get('https://api.myour.cc/media/sort').then((response) => {
         this.updateSort(response.data)
       });
     }

@@ -30,7 +30,7 @@
     route: {
       data () {
         document.setTitle('最好的我们：在青春这条道路上,我们平凡而又坚定');
-        this.$http.get('http://api.blog.com/media/article/' + this.$route.params.articleId).then((response) => {
+        this.$http.get('https://api.myour.cc/media/article/' + this.$route.params.articleId).then((response) => {
           this.updateArticle(response.data)
         });
       }
