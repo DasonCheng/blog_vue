@@ -1,6 +1,6 @@
 document.setTitle = function (t) {
   document.title = t;
-  /*var i = document.createElement('iframe');
+  var i = document.createElement('iframe');
   i.src = '//m.baidu.com/favicon.ico';
   i.style.display = 'none';
   i.onload = function () {
@@ -8,5 +8,5 @@ document.setTitle = function (t) {
       i.remove();
     }, 9)
   };
-  document.body.appendChild(i);*/
+  document.body.appendChild(i);
 };
