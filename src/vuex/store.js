@@ -43,13 +43,16 @@ const mutations = {
     state.count = Number(message)
   },
   UPDATESORT (state, sorts) {
-    state.sorts = JSON.parse(sorts)
+    // state.sorts = JSON.parse(sorts)
+    state.sorts = sorts
   },
   UPDATEARTICLES(state, articles) {
-    state.articles = JSON.parse(articles)
+    // state.articles = JSON.parse(articles)
+    state.articles = articles
   },
   UPDATEARTICLE(state, article) {
-    state.article = JSON.parse(article)
+    // state.article = JSON.parse(article)
+    state.article = article
   }
 };
 
