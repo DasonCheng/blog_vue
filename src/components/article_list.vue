@@ -4,7 +4,7 @@
       <div class="side-container clearfix">
         <leftside-component></leftside-component>
         <div class="right-side">
-          <template v-for="article in articles">
+          <template v-for="article in articles" transition="stagger" stagger="100">
             <a v-link="{ name: 'info', params: { articleId: article.id }}" class="ui link card">
               <div class="content">
                 <div class="header">{{article.title}}</div>
